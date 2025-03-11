@@ -1,0 +1,262 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\models\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\models\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\controllers\\professorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\controllers\\professorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\controllers\\gradescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\controllers\\gradescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\repository\\professorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\repository\\professorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\dto\\gradedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\dto\\gradedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\dto\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\dto\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\apifinanzauto.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\apifinanzauto.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|c:\\users\\jean via\u00F1a\\source\\repos\\apifinanzauto\\apifinanzauto\\repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2396CCDA-01C0-4B3C-84B0-284BD590F651}|ApiFinanzauto\\ApiFinanzauto.csproj|solutionrelative:apifinanzauto\\repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProfessorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Repository\\ProfessorRepository.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Repository\\ProfessorRepository.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Repository\\ProfessorRepository.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Repository\\ProfessorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T18:46:51.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GradeDto.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Dto\\GradeDto.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Dto\\GradeDto.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Dto\\GradeDto.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Dto\\GradeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T17:33:35.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CourseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Dto\\CourseDto.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Dto\\CourseDto.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Dto\\CourseDto.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Dto\\CourseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T06:04:22.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApiFinanzauto",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\ApiFinanzauto.csproj",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\ApiFinanzauto.csproj",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\ApiFinanzauto.csproj",
+              "RelativeToolTip": "ApiFinanzauto\\ApiFinanzauto.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-11T06:04:05.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Repository\\Repository.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Repository\\Repository.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Repository\\Repository.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwE8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T04:53:38.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Professor.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Models\\Professor.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Models\\Professor.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Models\\Professor.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Models\\Professor.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T02:24:35.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Models\\Student.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Models\\Student.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T02:24:31.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GradesController.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Controllers\\GradesController.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Controllers\\GradesController.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Controllers\\GradesController.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Controllers\\GradesController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwF8AAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T02:17:22.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAgwEcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T01:57:29.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProfessorController.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Controllers\\ProfessorController.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Controllers\\ProfessorController.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Controllers\\ProfessorController.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Controllers\\ProfessorController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwEYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T01:42:05.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Repository\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Repository\\StudentRepository.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Repository\\StudentRepository.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Repository\\StudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T22:25:03.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAUwEkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T21:40:33.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Grade.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Models\\Grade.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Models\\Grade.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Models\\Grade.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Models\\Grade.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:06:10.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "ApiFinanzauto\\Models\\Course.cs",
+              "ToolTip": "C:\\Users\\Jean Via\u00F1a\\source\\repos\\ApiFinanzauto\\ApiFinanzauto\\Models\\Course.cs",
+              "RelativeToolTip": "ApiFinanzauto\\Models\\Course.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:03:43.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

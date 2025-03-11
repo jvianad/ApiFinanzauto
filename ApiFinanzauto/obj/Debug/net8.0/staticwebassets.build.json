@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "7gQfdEnF9Kn+MjjjVHkdBcq3V+gr1Ns6ds6ceMb3IZ0=",
+  "Source": "ApiFinanzauto",
+  "BasePath": "_content/ApiFinanzauto",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
