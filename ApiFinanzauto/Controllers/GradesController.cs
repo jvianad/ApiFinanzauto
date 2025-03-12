@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using ApiFinanzauto.Dto;
+using ApiFinanzauto.Filters;
 
 namespace ApiFinanzauto.Controllers
 {
@@ -24,9 +25,20 @@ namespace ApiFinanzauto.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetGrades()
+        public async Task<IActionResult> GetGrades([FromQuery] int? studentId = null,
+            [FromQuery] int? courseId = null,
+            [FromQuery] decimal? gradeValueMin = null,
+            [FromQuery] decimal? gradeValueMax = null)
         {
-            var grades = await _gradeRepository.GetAllAsync();
+            var filter = new GradeFilter
+            {
+                StudentId = studentId,
+                CourseId = courseId,
+                GradeValueMin = gradeValueMin,
+                GradeValueMax = gradeValueMax
+            };
+
+            var grades = await _gradeRepository.GetAllAsync(filter);
             var options = new JsonSerializerOptions
             {
                 ReferenceHandler = ReferenceHandler.Preserve, // Manejar referencias para evitar ciclos

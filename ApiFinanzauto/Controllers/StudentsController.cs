@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Diagnostics;
+using ApiFinanzauto.Filters;
 
 namespace ApiFinanzauto.Controllers
 {
@@ -20,16 +21,25 @@ namespace ApiFinanzauto.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetAllStudents()
+        public async Task<IActionResult> GetAllStudents([FromQuery] string firstName = null,
+            [FromQuery] string lastName = null,
+            [FromQuery] string email = null)
         {
-            var students = await _studentRepository.GetAllAsync();
+            var filter = new StudentFilter
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                Email = email
+            };
+
+            var students = await _studentRepository.GetAllAsync(filter);
             var options = new JsonSerializerOptions
             {
-                ReferenceHandler = ReferenceHandler.Preserve, // Manejar referencias para evitar ciclos
+                ReferenceHandler = ReferenceHandler.Preserve,
                 WriteIndented = true
             };
             return Ok(JsonSerializer.Serialize(students, options));
-            
+
         }
 
 

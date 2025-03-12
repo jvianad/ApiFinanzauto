@@ -5,7 +5,7 @@ namespace ApiFinanzauto.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        Task<IEnumerable<T>> GetAllAsync();
+        Task<List<T>> GetAllAsync(object filter = null);
         Task<T> GetByIdAsync(int id);
         Task PostAsync(T entity);
         Task UpdateAsync(T entity);

@@ -4,6 +4,7 @@ using ApiFinanzauto.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using ApiFinanzauto.Filters;
 
 namespace ApiFinanzauto.Controllers
 {
@@ -21,12 +22,19 @@ namespace ApiFinanzauto.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetCourses()
+        public async Task<IActionResult> GetCourses([FromQuery] string name = null,
+            [FromQuery] int? professorId = null)
         {
-            var courses = await _courseRepository.GetAllAsync();
+            var filter = new CourseFilter
+            {
+                Name = name,
+                ProfessorId = professorId
+            };
+
+            var courses = await _courseRepository.GetAllAsync(filter);
             var options = new JsonSerializerOptions
             {
-                ReferenceHandler = ReferenceHandler.Preserve, // Manejar referencias para evitar ciclos
+                ReferenceHandler = ReferenceHandler.Preserve,
                 WriteIndented = true
             };
             return Ok(JsonSerializer.Serialize(courses, options));

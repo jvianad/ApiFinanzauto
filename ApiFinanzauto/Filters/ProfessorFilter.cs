@@ -1,0 +1,9 @@
+﻿namespace ApiFinanzauto.Filters
+{
+    public class ProfessorFilter
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+    }
+}

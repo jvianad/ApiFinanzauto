@@ -170,3 +170,4 @@ C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\r
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\ApiFinanzauto.pdb
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\ApiFinanzauto.genruntimeconfig.cache
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\ref\ApiFinanzauto.dll
+C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\ApiFinanzauto.sourcelink.json
