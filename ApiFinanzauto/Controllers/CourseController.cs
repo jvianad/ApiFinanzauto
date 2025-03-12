@@ -21,6 +21,13 @@ namespace ApiFinanzauto.Controllers
             _professorRepository = professorRepository;
         }
 
+        /// <summary>
+        /// Obtiene una lista de todos los cursos con filtros opcionales.
+        /// </summary>
+        /// <param name="name">Filtro por nombre del curso (opcional).</param>
+        /// <param name="professorId">Filtro por ID del profesor (opcional).</param>
+        /// <returns>Una lista de cursos que coinciden con los filtros.</returns>
+        /// <response code="200">Devuelve la lista de cursos.</response>
         [HttpGet]
         public async Task<IActionResult> GetCourses([FromQuery] string name = null,
             [FromQuery] int? professorId = null)
@@ -41,6 +48,13 @@ namespace ApiFinanzauto.Controllers
             
         }
 
+        /// <summary>
+        /// Obtiene un curso específico por su ID.
+        /// </summary>
+        /// <param name="id">El ID del curso a buscar.</param>
+        /// <returns>El curso con el ID especificado.</returns>
+        /// <response code="200">Devuelve el curso encontrado.</response>
+        /// <response code="404">Si el curso no se encuentra.</response>
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetCourse([FromRoute] int id)
         {
@@ -62,6 +76,13 @@ namespace ApiFinanzauto.Controllers
             return Ok(JsonSerializer.Serialize(course, options));
         }
 
+        /// <summary>
+        /// Crea un nuevo curso.
+        /// </summary>
+        /// <param name="courseDto">Datos del curso a crear.</param>
+        /// <returns>El curso creado con ID asignado.</returns>
+        /// <response code="201">Devuelve el curso creado.</response>
+        /// <response code="400">Si los datos de entrada son inválidos.</response>
         [HttpPost]
         public async Task<IActionResult> CreateCourse([FromBody] CourseDto courseDto)
         {
@@ -98,6 +119,15 @@ namespace ApiFinanzauto.Controllers
             return CreatedAtAction(nameof(GetCourse), new { id = course.Id }, JsonSerializer.Serialize(course, options));
         }
 
+        /// <summary>
+        /// Actualiza un curso existente.
+        /// </summary>
+        /// <param name="id">El ID del curso a actualizar.</param>
+        /// <param name="courseDto">Datos actualizados del curso.</param>
+        /// <returns>No Content si la actualización fue exitosa.</returns>
+        /// <response code="204">Si el curso se actualizó correctamente.</response>
+        /// <response code="400">Si los datos de entrada son inválidos.</response>
+        /// <response code="404">Si el curso no se encuentra.</response>
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateCourse([FromRoute] int id, [FromBody] CourseDto courseDto)
         {
@@ -130,6 +160,13 @@ namespace ApiFinanzauto.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Elimina un curso por su ID.
+        /// </summary>
+        /// <param name="id">El ID del curso a eliminar.</param>
+        /// <returns>No Content si la eliminación fue exitosa.</returns>
+        /// <response code="204">Si el curso se eliminó correctamente.</response>
+        /// <response code="404">Si el curso no se encuentra.</response>
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteCourse([FromRoute] int id)
         {

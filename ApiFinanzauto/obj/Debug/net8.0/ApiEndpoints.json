@@ -224,8 +224,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "professor",
-        "Type": "ApiFinanzauto.Models.Professor",
+        "Name": "professorDto",
+        "Type": "ApiFinanzauto.Dto.ProfessorDto",
         "IsRequired": true
       }
     ],
@@ -261,8 +261,8 @@
         "IsRequired": true
       },
       {
-        "Name": "professor",
-        "Type": "ApiFinanzauto.Models.Professor",
+        "Name": "professorDto",
+        "Type": "ApiFinanzauto.Dto.ProfessorDto",
         "IsRequired": true
       }
     ],
@@ -319,8 +319,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "student",
-        "Type": "ApiFinanzauto.Models.Student",
+        "Name": "studentDto",
+        "Type": "ApiFinanzauto.Dto.StudentDto",
         "IsRequired": true
       }
     ],
@@ -356,8 +356,8 @@
         "IsRequired": true
       },
       {
-        "Name": "student",
-        "Type": "ApiFinanzauto.Models.Student",
+        "Name": "studentDto",
+        "Type": "ApiFinanzauto.Dto.StudentDto",
         "IsRequired": true
       }
     ],

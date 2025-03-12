@@ -23,7 +23,15 @@ namespace ApiFinanzauto.Controllers
             _courseRepository = courseRepository;
 
         }
-
+        /// <summary>
+        /// Obtiene una lista de todas las calificaciones con filtros opcionales.
+        /// </summary>
+        /// <param name="studentId">Filtro por ID del estudiante (opcional).</param>
+        /// <param name="courseId">Filtro por ID del curso (opcional).</param>
+        /// <param name="gradeValueMin">Filtro por valor mínimo de la calificación (opcional).</param>
+        /// <param name="gradeValueMax">Filtro por valor máximo de la calificación (opcional).</param>
+        /// <returns>Una lista de calificaciones que coinciden con los filtros.</returns>
+        /// <response code="200">Devuelve la lista de calificaciones.</response>
         [HttpGet]
         public async Task<IActionResult> GetGrades([FromQuery] int? studentId = null,
             [FromQuery] int? courseId = null,
@@ -47,6 +55,13 @@ namespace ApiFinanzauto.Controllers
             return Ok(JsonSerializer.Serialize(grades, options));
         }
 
+        /// <summary>
+        /// Obtiene una calificación específica por su ID.
+        /// </summary>
+        /// <param name="id">El ID de la calificación a buscar.</param>
+        /// <returns>La calificación con el ID especificado.</returns>
+        /// <response code="200">Devuelve la calificación encontrada.</response>
+        /// <response code="404">Si la calificación no se encuentra.</response>
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetGrade([FromRoute] int id)
         {
@@ -70,6 +85,13 @@ namespace ApiFinanzauto.Controllers
             
         }
 
+        /// <summary>
+        /// Crea una nueva calificación asociada a un estudiante y curso.
+        /// </summary>
+        /// <param name="gradeDto">Datos de la calificación a crear.</param>
+        /// <returns>La calificación creada con ID asignado.</returns>
+        /// <response code="201">Devuelve la calificación creada.</response>
+        /// <response code="400">Si los datos de entrada son inválidos.</response>
         [HttpPost]
         public async Task<IActionResult> CreateGrade([FromBody] GradeDto gradeDto)
         {
@@ -109,6 +131,15 @@ namespace ApiFinanzauto.Controllers
             
         }
 
+        /// <summary>
+        /// Actualiza una calificación existente.
+        /// </summary>
+        /// <param name="id">El ID de la calificación a actualizar.</param>
+        /// <param name="gradeDto">Datos actualizados de la calificación.</param>
+        /// <returns>No Content si la actualización fue exitosa.</returns>
+        /// <response code="204">Si la calificación se actualizó correctamente.</response>
+        /// <response code="400">Si los datos de entrada son inválidos.</response>
+        /// <response code="404">Si la calificación no se encuentra.</response>
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateGrade([FromRoute] int id, [FromBody] GradeDto gradeDto)
         {
@@ -145,6 +176,13 @@ namespace ApiFinanzauto.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Elimina una calificación por su ID.
+        /// </summary>
+        /// <param name="id">El ID de la calificación a eliminar.</param>
+        /// <returns>No Content si la eliminación fue exitosa.</returns>
+        /// <response code="204">Si la calificación se eliminó correctamente.</response>
+        /// <response code="404">Si la calificación no se encuentra.</response>
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteGrade([FromRoute] int id)
         {

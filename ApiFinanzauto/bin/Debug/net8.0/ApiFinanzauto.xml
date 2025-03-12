@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiFinanzauto</name>
+    </assembly>
+    <members>
+        <member name="M:ApiFinanzauto.Controllers.CourseController.GetCourses(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Obtiene una lista de todos los cursos con filtros opcionales y paginación.
+            </summary>
+            <param name="name">Filtro por nombre del curso (opcional).</param>
+            <param name="professorId">Filtro por ID del profesor (opcional).</param>
+            <returns>Una lista de cursos que coinciden con los filtros.</returns>
+            <response code="200">Devuelve la lista de cursos.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.CourseController.GetCourse(System.Int32)">
+            <summary>
+            Obtiene un curso específico por su ID.
+            </summary>
+            <param name="id">El ID del curso a buscar.</param>
+            <returns>El curso con el ID especificado.</returns>
+            <response code="200">Devuelve el curso encontrado.</response>
+            <response code="404">Si el curso no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.CourseController.CreateCourse(ApiFinanzauto.Dto.CourseDto)">
+            <summary>
+            Crea un nuevo curso.
+            </summary>
+            <param name="courseDto">Datos del curso a crear.</param>
+            <returns>El curso creado con ID asignado.</returns>
+            <response code="201">Devuelve el curso creado.</response>
+            <response code="400">Si los datos de entrada son inválidos.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.CourseController.UpdateCourse(System.Int32,ApiFinanzauto.Dto.CourseDto)">
+            <summary>
+            Actualiza un curso existente.
+            </summary>
+            <param name="id">El ID del curso a actualizar.</param>
+            <param name="courseDto">Datos actualizados del curso.</param>
+            <returns>No Content si la actualización fue exitosa.</returns>
+            <response code="204">Si el curso se actualizó correctamente.</response>
+            <response code="400">Si los datos de entrada son inválidos.</response>
+            <response code="404">Si el curso no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.CourseController.DeleteCourse(System.Int32)">
+            <summary>
+            Elimina un curso por su ID.
+            </summary>
+            <param name="id">El ID del curso a eliminar.</param>
+            <returns>No Content si la eliminación fue exitosa.</returns>
+            <response code="204">Si el curso se eliminó correctamente.</response>
+            <response code="404">Si el curso no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.GradesController.GetGrades(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            Obtiene una lista de todas las calificaciones con filtros opcionales y paginación.
+            </summary>
+            <param name="studentId">Filtro por ID del estudiante (opcional).</param>
+            <param name="courseId">Filtro por ID del curso (opcional).</param>
+            <param name="gradeValueMin">Filtro por valor mínimo de la calificación (opcional).</param>
+            <param name="gradeValueMax">Filtro por valor máximo de la calificación (opcional).</param>
+            <returns>Una lista de calificaciones que coinciden con los filtros.</returns>
+            <response code="200">Devuelve la lista de calificaciones.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.GradesController.GetGrade(System.Int32)">
+            <summary>
+            Obtiene una calificación específica por su ID.
+            </summary>
+            <param name="id">El ID de la calificación a buscar.</param>
+            <returns>La calificación con el ID especificado.</returns>
+            <response code="200">Devuelve la calificación encontrada.</response>
+            <response code="404">Si la calificación no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.GradesController.CreateGrade(ApiFinanzauto.Dto.GradeDto)">
+            <summary>
+            Crea una nueva calificación asociada a un estudiante y curso.
+            </summary>
+            <param name="gradeDto">Datos de la calificación a crear.</param>
+            <returns>La calificación creada con ID asignado.</returns>
+            <response code="201">Devuelve la calificación creada.</response>
+            <response code="400">Si los datos de entrada son inválidos.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.GradesController.UpdateGrade(System.Int32,ApiFinanzauto.Dto.GradeDto)">
+            <summary>
+            Actualiza una calificación existente.
+            </summary>
+            <param name="id">El ID de la calificación a actualizar.</param>
+            <param name="gradeDto">Datos actualizados de la calificación.</param>
+            <returns>No Content si la actualización fue exitosa.</returns>
+            <response code="204">Si la calificación se actualizó correctamente.</response>
+            <response code="400">Si los datos de entrada son inválidos.</response>
+            <response code="404">Si la calificación no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.GradesController.DeleteGrade(System.Int32)">
+            <summary>
+            Elimina una calificación por su ID.
+            </summary>
+            <param name="id">El ID de la calificación a eliminar.</param>
+            <returns>No Content si la eliminación fue exitosa.</returns>
+            <response code="204">Si la calificación se eliminó correctamente.</response>
+            <response code="404">Si la calificación no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.ProfessorController.GetAllProfessors(System.String,System.String,System.String)">
+            <summary>
+            Obtiene una lista de todos los profesores con filtros opcionales.
+            </summary>
+            <param name="firstName">Filtro por nombre del profesor (opcional).</param>
+            <param name="lastName">Filtro por apellido del profesor (opcional).</param>
+            <param name="email">Filtro por email del profesor (opcional).</param>
+            <returns>Una lista de profesores que coinciden con los filtros.</returns>
+            /// <response code="200">Devuelve la lista de profesores.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.ProfessorController.GetProfessorById(System.Int32)">
+            <summary>
+            Obtiene un profesor específico por su ID.
+            </summary>
+            <param name="id">El ID del profesor a buscar.</param>
+            <returns>El profesor con el ID especificado.</returns>
+            <response code="200">Devuelve el profesor encontrado.</response>
+            <response code="404">Si el profesor no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.ProfessorController.CreateProfessor(ApiFinanzauto.Dto.ProfessorDto)">
+            <summary>
+            Crea un nuevo profesor.
+            </summary>
+            <param name="professorDto">Datos del profesor a crear.</param>
+            <returns>El profesor creado con ID asignado.</returns>
+            <response code="201">Devuelve el profesor creado.</response>
+            <response code="400">Si los datos de entrada son inválidos.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.ProfessorController.UpdateProfessor(System.Int32,ApiFinanzauto.Dto.ProfessorDto)">
+            <summary>
+            Actualiza un profesor existente.
+            </summary>
+            <param name="id">El ID del profesor a actualizar.</param>
+            <param name="professorDto">Datos actualizados del profesor.</param>
+            <returns>No Content si la actualización fue exitosa.</returns>
+            <response code="204">Si el profesor se actualizó correctamente.</response>
+            <response code="400">Si los datos de entrada son inválidos.</response>
+            <response code="404">Si el profesor no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.ProfessorController.DeleteProfessor(System.Int32)">
+            <summary>
+            Elimina un profesor por su ID.
+            </summary>
+            <param name="id">El ID del profesor a eliminar.</param>
+            <returns>No Content si la eliminación fue exitosa.</returns>
+            <response code="204">Si el profesor se eliminó correctamente.</response>
+            <response code="404">Si el profesor no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.StudentsController.GetAllStudents(System.String,System.String,System.String)">
+            <summary>
+            Obtiene una lista de todos los estudiantes con filtros opcionales.
+            </summary>
+            <param name="firstName">Filtro por nombre del estudiante (opcional).</param>
+            <param name="lastName">Filtro por apellido del estudiante (opcional).</param>
+            <param name="email">Filtro por email del estudiante (opcional).</param>
+            <returns>Una lista de estudiantes que coinciden con los filtros.</returns>
+            /// <response code="200">Devuelve la lista de estudiantes.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.StudentsController.GetStudent(System.Int32)">
+            <summary>
+            Obtiene un estudiante específico por su ID.
+            </summary>
+            <param name="id">El ID del estudiante a buscar.</param>
+            <returns>El estudiante con el ID especificado.</returns>
+            <response code="200">Devuelve el estudiante encontrado.</response>
+            <response code="404">Si el estudiante no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.StudentsController.CreateStudent(ApiFinanzauto.Dto.StudentDto)">
+            <summary>
+            Crea un nuevo estudiante.
+            </summary>
+            <param name="studentDto">Datos del estudiante a crear.</param>
+            <returns>El estudiante creado con ID asignado.</returns>
+            <response code="201">Devuelve el estudiante creado.</response>
+            <response code="400">Si los datos de entrada son inválidos.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.StudentsController.UpdateStudent(System.Int32,ApiFinanzauto.Dto.StudentDto)">
+            <summary>
+            Actualiza un estudiante existente.
+            </summary>
+            <param name="id">El ID del estudiante a actualizar.</param>
+            <param name="studentDto">Datos actualizados del estudiante.</param>
+            <returns>No Content si la actualización fue exitosa.</returns>
+            <response code="204">Si el estudiante se actualizó correctamente.</response>
+            <response code="400">Si los datos de entrada son inválidos.</response>
+            <response code="404">Si el estudiante no se encuentra.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.StudentsController.DeleteStudent(System.Int32)">
+            <summary>
+            Elimina un estudiante por su ID.
+            </summary>
+            <param name="id">El ID del estudiante a eliminar.</param>
+            <returns>No Content si la eliminación fue exitosa.</returns>
+            <response code="204">Si el estudiante se eliminó correctamente.</response>
+            <response code="404">Si el estudiante no se encuentra.</response>
+        </member>
+        <member name="T:ApiFinanzauto.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

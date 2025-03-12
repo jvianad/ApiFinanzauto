@@ -1,7 +1,12 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "My API",
+    "title": "Mi API",
+    "description": "API para gestionar profesores, estudiantes, cursos y calificaciones",
+    "contact": {
+      "name": "Jean Carlo Viaña De Mares",
+      "email": "jeanvianademares@gmail.com"
+    },
     "version": "v1"
   },
   "paths": {
@@ -10,10 +15,12 @@
         "tags": [
           "Course"
         ],
+        "summary": "Obtiene una lista de todos los cursos con filtros opcionales y paginación.",
         "parameters": [
           {
             "name": "name",
             "in": "query",
+            "description": "Filtro por nombre del curso (opcional).",
             "schema": {
               "type": "string"
             }
@@ -21,6 +28,7 @@
           {
             "name": "professorId",
             "in": "query",
+            "description": "Filtro por ID del profesor (opcional).",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -29,7 +37,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Devuelve la lista de cursos."
           }
         }
       },
@@ -37,7 +45,9 @@
         "tags": [
           "Course"
         ],
+        "summary": "Crea un nuevo curso.",
         "requestBody": {
+          "description": "Datos del curso a crear.",
           "content": {
             "application/json": {
               "schema": {
@@ -59,6 +69,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "201": {
+            "description": "Devuelve el curso creado."
+          },
+          "400": {
+            "description": "Si los datos de entrada son inválidos."
           }
         }
       }
@@ -68,10 +84,12 @@
         "tags": [
           "Course"
         ],
+        "summary": "Obtiene un curso específico por su ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID del curso a buscar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -81,7 +99,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Devuelve el curso encontrado."
+          },
+          "404": {
+            "description": "Si el curso no se encuentra."
           }
         }
       },
@@ -89,10 +110,12 @@
         "tags": [
           "Course"
         ],
+        "summary": "Actualiza un curso existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID del curso a actualizar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -101,6 +124,7 @@
           }
         ],
         "requestBody": {
+          "description": "Datos actualizados del curso.",
           "content": {
             "application/json": {
               "schema": {
@@ -122,6 +146,15 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "Si el curso se actualizó correctamente."
+          },
+          "400": {
+            "description": "Si los datos de entrada son inválidos."
+          },
+          "404": {
+            "description": "Si el curso no se encuentra."
           }
         }
       },
@@ -129,10 +162,12 @@
         "tags": [
           "Course"
         ],
+        "summary": "Elimina un curso por su ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID del curso a eliminar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -143,6 +178,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "Si el curso se eliminó correctamente."
+          },
+          "404": {
+            "description": "Si el curso no se encuentra."
           }
         }
       }
@@ -152,10 +193,12 @@
         "tags": [
           "Grades"
         ],
+        "summary": "Obtiene una lista de todas las calificaciones con filtros opcionales y paginación.",
         "parameters": [
           {
             "name": "studentId",
             "in": "query",
+            "description": "Filtro por ID del estudiante (opcional).",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -164,6 +207,7 @@
           {
             "name": "courseId",
             "in": "query",
+            "description": "Filtro por ID del curso (opcional).",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -172,6 +216,7 @@
           {
             "name": "gradeValueMin",
             "in": "query",
+            "description": "Filtro por valor mínimo de la calificación (opcional).",
             "schema": {
               "type": "number",
               "format": "double"
@@ -180,6 +225,7 @@
           {
             "name": "gradeValueMax",
             "in": "query",
+            "description": "Filtro por valor máximo de la calificación (opcional).",
             "schema": {
               "type": "number",
               "format": "double"
@@ -188,7 +234,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Devuelve la lista de calificaciones."
           }
         }
       },
@@ -196,7 +242,9 @@
         "tags": [
           "Grades"
         ],
+        "summary": "Crea una nueva calificación asociada a un estudiante y curso.",
         "requestBody": {
+          "description": "Datos de la calificación a crear.",
           "content": {
             "application/json": {
               "schema": {
@@ -218,6 +266,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "201": {
+            "description": "Devuelve la calificación creada."
+          },
+          "400": {
+            "description": "Si los datos de entrada son inválidos."
           }
         }
       }
@@ -227,10 +281,12 @@
         "tags": [
           "Grades"
         ],
+        "summary": "Obtiene una calificación específica por su ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID de la calificación a buscar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -240,7 +296,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Devuelve la calificación encontrada."
+          },
+          "404": {
+            "description": "Si la calificación no se encuentra."
           }
         }
       },
@@ -248,10 +307,12 @@
         "tags": [
           "Grades"
         ],
+        "summary": "Actualiza una calificación existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID de la calificación a actualizar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -260,6 +321,7 @@
           }
         ],
         "requestBody": {
+          "description": "Datos actualizados de la calificación.",
           "content": {
             "application/json": {
               "schema": {
@@ -281,6 +343,15 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "Si la calificación se actualizó correctamente."
+          },
+          "400": {
+            "description": "Si los datos de entrada son inválidos."
+          },
+          "404": {
+            "description": "Si la calificación no se encuentra."
           }
         }
       },
@@ -288,10 +359,12 @@
         "tags": [
           "Grades"
         ],
+        "summary": "Elimina una calificación por su ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID de la calificación a eliminar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -302,6 +375,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "Si la calificación se eliminó correctamente."
+          },
+          "404": {
+            "description": "Si la calificación no se encuentra."
           }
         }
       }
@@ -311,10 +390,12 @@
         "tags": [
           "Professor"
         ],
+        "summary": "Obtiene una lista de todos los profesores con filtros opcionales.",
         "parameters": [
           {
             "name": "firstName",
             "in": "query",
+            "description": "Filtro por nombre del profesor (opcional).",
             "schema": {
               "type": "string"
             }
@@ -322,6 +403,7 @@
           {
             "name": "lastName",
             "in": "query",
+            "description": "Filtro por apellido del profesor (opcional).",
             "schema": {
               "type": "string"
             }
@@ -329,6 +411,7 @@
           {
             "name": "email",
             "in": "query",
+            "description": "Filtro por email del profesor (opcional).",
             "schema": {
               "type": "string"
             }
@@ -336,7 +419,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Devuelve la lista de profesores."
           }
         }
       },
@@ -344,21 +427,23 @@
         "tags": [
           "Professor"
         ],
+        "summary": "Crea un nuevo profesor.",
         "requestBody": {
+          "description": "Datos del profesor a crear.",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Professor"
+                "$ref": "#/components/schemas/ProfessorDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Professor"
+                "$ref": "#/components/schemas/ProfessorDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Professor"
+                "$ref": "#/components/schemas/ProfessorDto"
               }
             }
           }
@@ -366,6 +451,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "201": {
+            "description": "Devuelve el profesor creado."
+          },
+          "400": {
+            "description": "Si los datos de entrada son inválidos."
           }
         }
       }
@@ -375,10 +466,12 @@
         "tags": [
           "Professor"
         ],
+        "summary": "Obtiene un profesor específico por su ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID del profesor a buscar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -388,7 +481,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Devuelve el profesor encontrado."
+          },
+          "404": {
+            "description": "Si el profesor no se encuentra."
           }
         }
       },
@@ -396,10 +492,12 @@
         "tags": [
           "Professor"
         ],
+        "summary": "Actualiza un profesor existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID del profesor a actualizar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -408,20 +506,21 @@
           }
         ],
         "requestBody": {
+          "description": "Datos actualizados del profesor.",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Professor"
+                "$ref": "#/components/schemas/ProfessorDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Professor"
+                "$ref": "#/components/schemas/ProfessorDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Professor"
+                "$ref": "#/components/schemas/ProfessorDto"
               }
             }
           }
@@ -429,6 +528,15 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "Si el profesor se actualizó correctamente."
+          },
+          "400": {
+            "description": "Si los datos de entrada son inválidos."
+          },
+          "404": {
+            "description": "Si el profesor no se encuentra."
           }
         }
       },
@@ -436,10 +544,12 @@
         "tags": [
           "Professor"
         ],
+        "summary": "Elimina un profesor por su ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID del profesor a eliminar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -450,6 +560,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "Si el profesor se eliminó correctamente."
+          },
+          "404": {
+            "description": "Si el profesor no se encuentra."
           }
         }
       }
@@ -459,10 +575,12 @@
         "tags": [
           "Students"
         ],
+        "summary": "Obtiene una lista de todos los estudiantes con filtros opcionales.",
         "parameters": [
           {
             "name": "firstName",
             "in": "query",
+            "description": "Filtro por nombre del estudiante (opcional).",
             "schema": {
               "type": "string"
             }
@@ -470,6 +588,7 @@
           {
             "name": "lastName",
             "in": "query",
+            "description": "Filtro por apellido del estudiante (opcional).",
             "schema": {
               "type": "string"
             }
@@ -477,6 +596,7 @@
           {
             "name": "email",
             "in": "query",
+            "description": "Filtro por email del estudiante (opcional).",
             "schema": {
               "type": "string"
             }
@@ -484,7 +604,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Devuelve la lista de estudiantes."
           }
         }
       },
@@ -492,21 +612,23 @@
         "tags": [
           "Students"
         ],
+        "summary": "Crea un nuevo estudiante.",
         "requestBody": {
+          "description": "Datos del estudiante a crear.",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/StudentDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/StudentDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/StudentDto"
               }
             }
           }
@@ -514,6 +636,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "201": {
+            "description": "Devuelve el estudiante creado."
+          },
+          "400": {
+            "description": "Si los datos de entrada son inválidos."
           }
         }
       }
@@ -523,10 +651,12 @@
         "tags": [
           "Students"
         ],
+        "summary": "Obtiene un estudiante específico por su ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID del estudiante a buscar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -536,7 +666,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Devuelve el estudiante encontrado."
+          },
+          "404": {
+            "description": "Si el estudiante no se encuentra."
           }
         }
       },
@@ -544,10 +677,12 @@
         "tags": [
           "Students"
         ],
+        "summary": "Actualiza un estudiante existente.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID del estudiante a actualizar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -556,20 +691,21 @@
           }
         ],
         "requestBody": {
+          "description": "Datos actualizados del estudiante.",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/StudentDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/StudentDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/StudentDto"
               }
             }
           }
@@ -577,6 +713,15 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "Si el estudiante se actualizó correctamente."
+          },
+          "400": {
+            "description": "Si los datos de entrada son inválidos."
+          },
+          "404": {
+            "description": "Si el estudiante no se encuentra."
           }
         }
       },
@@ -584,10 +729,12 @@
         "tags": [
           "Students"
         ],
+        "summary": "Elimina un estudiante por su ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "El ID del estudiante a eliminar.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -598,6 +745,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "Si el estudiante se eliminó correctamente."
+          },
+          "404": {
+            "description": "Si el estudiante no se encuentra."
           }
         }
       }
@@ -605,54 +758,6 @@
   },
   "components": {
     "schemas": {
-      "Course": {
-        "required": [
-          "created_At",
-          "description",
-          "name",
-          "professorId",
-          "updated_At"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "description": {
-            "maxLength": 500,
-            "minLength": 1,
-            "type": "string"
-          },
-          "created_At": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated_At": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "professorId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "professor": {
-            "$ref": "#/components/schemas/Professor"
-          },
-          "grades": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Grade"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "CourseDto": {
         "type": "object",
         "properties": {
@@ -667,54 +772,6 @@
           "description": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Grade": {
-        "required": [
-          "courseId",
-          "created_At",
-          "date",
-          "gradeValue",
-          "studentId",
-          "updated_At"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "studentId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "courseId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "gradeValue": {
-            "type": "number",
-            "format": "double"
-          },
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "created_At": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated_At": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "student": {
-            "$ref": "#/components/schemas/Student"
-          },
-          "course": {
-            "$ref": "#/components/schemas/Course"
           }
         },
         "additionalProperties": false
@@ -741,21 +798,15 @@
         },
         "additionalProperties": false
       },
-      "Professor": {
+      "ProfessorDto": {
         "required": [
-          "created_At",
           "email",
           "firstName",
           "lastName",
-          "specialty",
-          "updated_At"
+          "specialty"
         ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "firstName": {
             "maxLength": 50,
             "minLength": 1,
@@ -774,68 +825,33 @@
           "specialty": {
             "minLength": 1,
             "type": "string"
-          },
-          "created_At": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated_At": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Course"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Student": {
+      "StudentDto": {
         "required": [
-          "created_At",
           "email",
-          "lastName",
-          "name",
-          "updated_At"
+          "lastName"
         ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
           },
           "lastName": {
-            "maxLength": 50,
-            "minLength": 1,
+            "maxLength": 100,
+            "minLength": 0,
             "type": "string"
           },
           "email": {
-            "minLength": 1,
+            "maxLength": 100,
+            "minLength": 0,
             "type": "string",
             "format": "email"
-          },
-          "created_At": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated_At": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "grades": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Grade"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
