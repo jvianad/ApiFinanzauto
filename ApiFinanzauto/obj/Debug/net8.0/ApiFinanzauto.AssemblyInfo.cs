@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiFinanzauto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d00d7ad56d01c19b94b1293bff882831f2c5225f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4c8d2c86c7f7dbc8678a2282456dce3ad4389c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiFinanzauto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiFinanzauto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

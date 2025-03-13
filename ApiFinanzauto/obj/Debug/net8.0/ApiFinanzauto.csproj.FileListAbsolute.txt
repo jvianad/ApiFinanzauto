@@ -163,7 +163,6 @@ C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\s
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ApiFinanzauto.props
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ApiFinanzauto.props
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\ApiFinan.DE015D47.Up2Date
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\ApiFinanzauto.dll
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\refint\ApiFinanzauto.dll
@@ -173,3 +172,9 @@ C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\r
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\ApiFinanzauto.sourcelink.json
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\bin\Debug\net8.0\ApiFinanzauto.xml
 C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\ApiFinanzauto.xml
+C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Jean Viaña\source\repos\ApiFinanzauto\ApiFinanzauto\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -10,12 +10,118 @@
     "version": "v1"
   },
   "paths": {
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Inicia sesión y devuelve un token JWT.",
+        "requestBody": {
+          "description": "Credenciales del usuario (username y password).",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Devuelve el token JWT."
+          },
+          "401": {
+            "description": "Si las credenciales son inválidas.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Registra un nuevo usuario.",
+        "requestBody": {
+          "description": "Datos del usuario a registrar (username y password).",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Usuario registrado correctamente."
+          },
+          "400": {
+            "description": "Si los datos son inválidos o el usuario ya existe.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/course": {
       "get": {
         "tags": [
           "Course"
         ],
-        "summary": "Obtiene una lista de todos los cursos con filtros opcionales y paginación.",
+        "summary": "Obtiene una lista de todos los cursos con filtros opcionales.",
         "parameters": [
           {
             "name": "name",
@@ -193,7 +299,7 @@
         "tags": [
           "Grades"
         ],
-        "summary": "Obtiene una lista de todas las calificaciones con filtros opcionales y paginación.",
+        "summary": "Obtiene una lista de todas las calificaciones con filtros opcionales.",
         "parameters": [
           {
             "name": "studentId",
@@ -759,24 +865,37 @@
   "components": {
     "schemas": {
       "CourseDto": {
+        "required": [
+          "description",
+          "name",
+          "professorId"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
           },
           "professorId": {
             "type": "integer",
             "format": "int32"
           },
           "description": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
       "GradeDto": {
+        "required": [
+          "courseId",
+          "date",
+          "gradeValue",
+          "studentId"
+        ],
         "type": "object",
         "properties": {
           "studentId": {
@@ -797,6 +916,47 @@
           }
         },
         "additionalProperties": false
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
       },
       "ProfessorDto": {
         "required": [
@@ -856,6 +1016,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Por favor ingresa el token JWT con el formato 'Bearer {token}'",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

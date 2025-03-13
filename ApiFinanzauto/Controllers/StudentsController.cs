@@ -7,11 +7,13 @@ using System.Text.Json;
 using System.Diagnostics;
 using ApiFinanzauto.Filters;
 using ApiFinanzauto.Dto;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiFinanzauto.Controllers
 {
     [Route("api/student")]
     [ApiController]
+    [Authorize]
     public class StudentsController : ControllerBase
     {
         private readonly IRepository<Student> _studentRepository;

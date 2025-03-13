@@ -4,9 +4,27 @@
         <name>ApiFinanzauto</name>
     </assembly>
     <members>
+        <member name="M:ApiFinanzauto.Controllers.AuthController.Login(ApiFinanzauto.Dto.LoginDto)">
+            <summary>
+            Inicia sesión y devuelve un token JWT.
+            </summary>
+            <param name="loginDto">Credenciales del usuario (username y password).</param>
+            <returns>Un token JWT si las credenciales son válidas.</returns>
+            <response code="200">Devuelve el token JWT.</response>
+            <response code="401">Si las credenciales son inválidas.</response>
+        </member>
+        <member name="M:ApiFinanzauto.Controllers.AuthController.Register(ApiFinanzauto.Dto.LoginDto)">
+            <summary>
+            Registra un nuevo usuario.
+            </summary>
+            <param name="registerDto">Datos del usuario a registrar (username y password).</param>
+            <returns>Confirmación si el usuario se registró correctamente.</returns>
+            <response code="200">Usuario registrado correctamente.</response>
+            <response code="400">Si los datos son inválidos o el usuario ya existe.</response>
+        </member>
         <member name="M:ApiFinanzauto.Controllers.CourseController.GetCourses(System.String,System.Nullable{System.Int32})">
             <summary>
-            Obtiene una lista de todos los cursos con filtros opcionales y paginación.
+            Obtiene una lista de todos los cursos con filtros opcionales.
             </summary>
             <param name="name">Filtro por nombre del curso (opcional).</param>
             <param name="professorId">Filtro por ID del profesor (opcional).</param>
@@ -53,7 +71,7 @@
         </member>
         <member name="M:ApiFinanzauto.Controllers.GradesController.GetGrades(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
             <summary>
-            Obtiene una lista de todas las calificaciones con filtros opcionales y paginación.
+            Obtiene una lista de todas las calificaciones con filtros opcionales.
             </summary>
             <param name="studentId">Filtro por ID del estudiante (opcional).</param>
             <param name="courseId">Filtro por ID del curso (opcional).</param>
@@ -206,6 +224,42 @@
             <inheritdoc />
         </member>
         <member name="M:ApiFinanzauto.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiFinanzauto.Migrations.AddIdentityAndEntities">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.AddIdentityAndEntities.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.AddIdentityAndEntities.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.AddIdentityAndEntities.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiFinanzauto.Migrations.MakeFullNameOptional">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.MakeFullNameOptional.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.MakeFullNameOptional.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.MakeFullNameOptional.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ApiFinanzauto.Migrations.AddRolesSeedData">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.AddRolesSeedData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.AddRolesSeedData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiFinanzauto.Migrations.AddRolesSeedData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

@@ -5,11 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using ApiFinanzauto.Filters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiFinanzauto.Controllers
 {
     [Route("api/course")]
     [ApiController]
+    [Authorize]
     public class CourseController:ControllerBase
     {
         private readonly IRepository<Course> _courseRepository;

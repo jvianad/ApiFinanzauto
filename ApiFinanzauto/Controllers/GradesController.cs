@@ -5,11 +5,13 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using ApiFinanzauto.Dto;
 using ApiFinanzauto.Filters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiFinanzauto.Controllers
 {
     [Route("api/grades")]
     [ApiController]
+    [Authorize]
     public class GradesController:ControllerBase
     {
         private readonly IRepository<Grade> _gradeRepository;
